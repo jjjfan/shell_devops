@@ -2,6 +2,24 @@
 ---  
 ## 1、Shell介绍  
 
+```BASH
+
+    ubaugust@DESKTOP-QQI3DMT:~$ ll
+    total 468
+    drwxr-xr-x 1 ubaugust ubaugust    512 Nov 13 20:09 ./
+    drwxr-xr-x 1 root     root        512 Mar  5  2019 ../
+    -rw------- 1 ubaugust ubaugust   1347 Nov 13 21:03 .bash_history
+    -rw-r--r-- 1 ubaugust ubaugust    220 Mar  5  2019 .bash_logout
+    -rw-r--r-- 1 ubaugust ubaugust   3771 Mar  5  2019 .bashrc
+    -rw-r--r-- 1 ubaugust ubaugust    807 Mar  5  2019 .profile
+    -rw-r--r-- 1 ubaugust ubaugust      0 Jul 12 21:21 .sudo_as_admin_successful
+    -rw-rw-rw- 1 ubaugust ubaugust 231816 Nov 13 20:04 a.txt
+    -rw-rw-rw- 1 ubaugust ubaugust 102400 Nov 13 20:09 abc.aa
+    -rw-rw-rw- 1 ubaugust ubaugust 102400 Nov 13 20:09 abc.ab
+    -rw-rw-rw- 1 ubaugust ubaugust  27016 Nov 13 20:09 abc.ac
+    ubaugust@DESKTOP-QQI3DMT:~$
+
+```
 ![图标](images/01_Shell介绍.jpg)
 
 ## 2、命令历史  
