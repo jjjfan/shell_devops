@@ -16,9 +16,9 @@
 ## 6、管道符和作业控制  
 ![图标](images/06_管道符和作业控制.jpg) 
 ## 7、Shell 变量（上）  
-![图标](images/07_Shell 变量（上）.jpg) 
+![图标](images/07_Shell变量（上）.jpg) 
 ## 8、Shell 变量（下）  
-![图标](images/08_Shell 变量（下）.jpg) 
+![图标](images/08_Shell变量（下）.jpg) 
 ## 9、环境变量配置文件  
 ![图标](images/09_环境变量配置文件.jpg) 
 ## 10、特殊符号 cut命令  
