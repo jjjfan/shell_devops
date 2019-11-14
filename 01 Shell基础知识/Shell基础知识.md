@@ -2,7 +2,7 @@
 ---
 ## 1、Shell介绍  
 
-![图标](01 Shell介绍.jpg)
+![图标](01%20Shell介绍.jpg)
 
 ## 2、命令历史  
 ![图标](mdImages/1.jpg)  
