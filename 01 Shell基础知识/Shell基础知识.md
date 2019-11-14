@@ -5,7 +5,7 @@
 ![图标](https://github.com/jjjfan/shell_devops/blob/master/01%20Shell%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/01%20Shell%E4%BB%8B%E7%BB%8D.jpg?raw=true)
 
 ## 2、命令历史  
-![图标]  (mdImages/1.jpg)  
+![图标](mdImages/1.jpg)  
 ## 3、命令补全和别名  
 ![图标]  (mdImages/1.jpg)  
 
