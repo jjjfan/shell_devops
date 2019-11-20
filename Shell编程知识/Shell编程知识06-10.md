@@ -1,15 +1,16 @@
 # Shell编程知识06-10.md
 --- 
-## 1、shell脚本介绍  
-![图标](images/01_shell脚本介绍.jpg)  
-## 2、shell脚本结构和执行  
-![图标](images/02_shell脚本结构和执行.jpg)  
-## 3、date命令用法  
-![图标](images/03_date命令用法.jpg)  
-## 4、shell脚本中的变量  
-![图标](images/04_shell脚本中的变量.jpg)  
-## 5、shell脚本中的逻辑判断  
-![图标](images/05_shell脚本中的逻辑判断.jpg)  
+## 6、文件目录属性判断
+![图标](images/06_文件目录属性判断.jpg)
+## 7、if特殊用法
+![图标](images/07_if特殊用法.jpg)
+## 8、cace判断（上）
+![图标](images/08_cace判断（上）.jpg)
+## 9、cace判断（下）
+![图标](images/09_cace判断（下）.jpg)
+## 10、for循环
+![图标](images/10_for循环.jpg)
+
 
 
 
