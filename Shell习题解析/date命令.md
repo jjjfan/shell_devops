@@ -198,11 +198,12 @@ NTP服务器(上海) ：ntp.api.bz
 台警大授时中心(台湾)：asia.pool.ntp.org  
 
 #### 扩展：检查一组命令花费的时间：
+```  
 #!/bin/bash 
 start=$(date +%s) 
 nmap man.linuxde.net &> /dev/null 
 end=$(date +%s) 
 difference=$(( end - start )) 
 echo $difference seconds.
-
+```  
 
