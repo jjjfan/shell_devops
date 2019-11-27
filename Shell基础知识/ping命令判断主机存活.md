@@ -1,0 +1,1 @@
+﻿# ping命令判断存活主机.md```    ping -c 1 -w 1 192.168.1.1 &> /dev/null && result=0 ||result=1      if [ "$result" == 0 ];then          echo "192.168.1.1 is UP!"          else          echo "192.168.2.1 is DOWN!"      fi  ```   ## 注意 &>要连起来写。
