@@ -1,0 +1,14 @@
+# shell习题解析16_20.md
+---  
+## sed命令.md
+[sed命令.md](sed命令.md)  
+## sed命令.md
+[sed命令.md](sed命令.md)  
+## sed命令.md
+[sed命令.md](sed命令.md)  
+## sed命令.md
+[sed命令.md](sed命令.md)  
+
+
+
+## 【技巧】  
