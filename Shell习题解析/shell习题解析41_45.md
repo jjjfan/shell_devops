@@ -1,14 +1,10 @@
-# shell习题解析21_25.md
+# shell习题解析41_45.md
 ---  
-## sed命令.md
-[sed命令.md](sed命令.md)  
-## sed命令.md
-[sed命令.md](sed命令.md)  
-## sed命令.md
-[sed命令.md](sed命令.md)  
-## sed命令.md
-[sed命令.md](sed命令.md)  
-
-
 
 ## 【技巧】  
+### 小常识:
+        我们用ps elf 或是 ps aux可以查看到进程的PID，而每个PID都会在/proc内产生。如果查看到的pid在proc内是没有的，则进程被人修改了，这就代表系统很有可能已经被入侵过了。
+        遍历pid 逐一查看在/proc/下面是否有以该pid为名的目录。
+### 打印行内容，不打印换行符 echo -ne "$line"  
+    打印行内容，并打印换行符 echo "$line"          
+### 去除换行\n的方式： sed 'N;N;s/\n/ /g' 1.txt  把前面二行放到一行中即 "1\n2\n3"用同一个匹配模式's/\n/ /g' 处理  

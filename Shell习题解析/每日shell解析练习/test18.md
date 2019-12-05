@@ -7,3 +7,11 @@ select host from mysql.user where user=aming;
 show grants for aming@ip;  
 
 ## 【解答】   
+```bash  
+
+#!/bin/bash
+ip="123.45.67.89"
+Mysql_c="mysql -uroot -proot_password123"
+$Mysql_c -e "grant all on *.* to 'aming'@'$ip' "  
+
+```  

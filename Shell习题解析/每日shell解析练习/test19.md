@@ -7,3 +7,44 @@
     4）假设所有机器上都有ntpdate命令  
 
 ## 【解答】   
+```bash  
+
+#!/bin/bash
+A_ip="123.45.67.89"
+B_ip="123.45.67.89"
+C_ip="123.45.67.89"
+D_ip="123.45.67.89"
+E_ip="123.45.67.89"
+
+A_user="root"
+A_passwd="123456"
+A_time=`ssh $A_ip "date +%s" `
+B_time=`ssh $A_ip "ssh $B_ip 'date +%s' " `
+if [ $((A_time-B_time)) -gt 2 ] ||  [ $((A_time-B_time)) -lt -2 ]
+then
+        ssh $A_ip "ssh $B_ip 'ntpdate time.windows.com' "
+fi
+
+A_time=`ssh $A_ip "date +%s" `
+C_time=`ssh $A_ip "ssh $C_ip 'date +%s' " `
+if [ $((A_time-C_time)) -gt 2 ] ||  [ $((A_time-C_time)) -lt -2 ]
+then
+        ssh $A_ip "ssh $C_ip 'ntpdate time.windows.com' "
+fi
+
+A_time=`ssh $A_ip "date +%s" `
+D_time=`ssh $A_ip "ssh $D_ip 'date +%s' " `
+if [ $((A_time-D_time)) -gt 2 ] ||  [ $((A_time-D_time)) -lt -2 ]
+then
+        ssh $A_ip "ssh $D_ip 'ntpdate time.windows.com' "
+fi
+
+A_time=`ssh $A_ip "date +%s" `
+E_time=`ssh $A_ip "ssh $E_ip 'date +%s' " `
+if [ $((A_time-E_time)) -gt 2 ] ||  [ $((A_time-E_time)) -lt -2 ]
+then
+        ssh $A_ip "ssh $E_ip 'ntpdate time.windows.com' "
+fi
+
+
+```  

@@ -5,3 +5,45 @@
 
 
 ## 【解答】   
+```bash  
+
+#!/bin/bash
+destdir=
+destyear=$2
+#echo "ls target dir is $dest !!!"
+#echo "top size num is $2 !!!"
+if [ -z "$1"  ]
+then
+        destdir="/abc/123/images/"
+elif [ -d "$1"   ]
+then
+        destdir=$1
+else
+        destdir="/abc/123/images/"
+fi
+
+if [ -z "$destyear"  ]
+then
+        destyear=2017
+      echo "in -z "
+elif echo $destyear | grep -q '[^0-9]'
+then
+        destyear=2017
+      echo "in -n grep -q"
+fi
+
+#echo $destdir
+#echo $destyear
+
+cd $destdir
+#echo `pwd`
+for logdir in `find . -type d -name "day_"$destyear'*' | sed 's/[^0-9]//g'`
+do
+        #echo "$logdir"
+        #echo `pwd`
+        tar -czvf "day_"$logdir.tar.gz  "./day_"$logdir"/" &>/dev/null
+        rm -rf  "day_"$logdir"/"
+done
+
+
+```  
