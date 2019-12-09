@@ -15,3 +15,15 @@ Mysql_c="mysql -uroot -proot_password123"
 $Mysql_c -e "grant all on *.* to 'aming'@'$ip' "  
 
 ```  
+## 【答案】
+```bash  
+
+    #!/bin/bash
+    mys="mysql -uroot -proot_passwd123"
+    new_ip="123.45.67.89"
+    ip=`$mys -e "select host from mysql.user where user='aming'"|tail -1`
+    $mys -e "show grants for aming@$ip"|tail -2 > /tmp/aming.grants
+    sed  -i "s/$ip/$new_ip/" /tmp/aming.grants
+    sed -i 's/.*/&amp; ;/' /tmp/aming.grants
+    $mys < /tmp/aming.grants  
+```  

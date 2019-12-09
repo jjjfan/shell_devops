@@ -44,6 +44,14 @@ do
         tar -czvf "day_"$logdir.tar.gz  "./day_"$logdir"/" &>/dev/null
         rm -rf  "day_"$logdir"/"
 done
-
+```  
+### 【答案】 
+```bash  
+        #!/bin/bash
+        cd  /abc/123/images
+        for d in `ls day_2017*`
+        do
+            tar zxf $d.tar.gz $d && rm -rf $d
+        done
 
 ```  

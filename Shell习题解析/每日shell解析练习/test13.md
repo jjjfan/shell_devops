@@ -49,3 +49,35 @@
 
 ```  
 
+### 【答案】  
+```bash  
+
+        #!/bin/bash
+        while :
+        do
+            t=`date +%H%M`
+            if [ $t == "00" ]
+            then
+                rm -f /tmp/log_line.txt
+                sleep 60
+            fi
+
+            if [ ! -f /tmp/log_line.txt ]
+            then
+                touch /tmp/log_line.txt
+                wc -l /data/logs/error.log|awk '{print $1}' >> /tmp/log_line.txt
+            fi
+
+            last_n=`tail -1 /tmp/log_line.txt`
+            n=`wc -l /data/logs/error.log|awk '{print $1}'`
+            echo $n >> /tmp/log_line.txt
+
+            if [ $n -gt $last_n ]
+            then
+                python /usr/local/sbin/mail.py xxx@xx.com "错误日志增加了" "`tail /data/logs/error.log`"
+            fi
+            sleep 30
+
+        done
+
+```  

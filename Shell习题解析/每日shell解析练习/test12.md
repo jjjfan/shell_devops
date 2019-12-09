@@ -57,7 +57,18 @@
         sed -i $count',$d' $logfile
         
 ```  
+### 【答案】  
+```bash  
+        #!/bin/bash
+        find /home/123 -type f > /tmp/f.txt
+        for f in `cat /tmp/f.txt`
+        do
+            du -sb $f
+        done > /tmp/f_size.txt
+        d=`date +%Y%m%d`
+        sort -nr /tmp/f_size.txt |head -20 > /tmp/$d.txt
 
+```  
 
 
 

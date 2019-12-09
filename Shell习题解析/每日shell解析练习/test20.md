@@ -56,11 +56,13 @@ case $tag in
         *)
                 echo "to less parameter!"
                 echo "./test20.sh databasename tablename  [ headlinenum  ]"
-
 esac
-
-
 echo "===== end ====="
+
+```  
+### 【答案】 
+```bash  
+
 
 
 ```  

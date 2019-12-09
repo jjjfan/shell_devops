@@ -45,6 +45,26 @@ if [ $((A_time-E_time)) -gt 2 ] ||  [ $((A_time-E_time)) -lt -2 ]
 then
         ssh $A_ip "ssh $E_ip 'ntpdate time.windows.com' "
 fi
+```  
+### 【答案】 
+```bash  
 
+#!/bin/bash
+for host in  B C D E
+do
+    t=date +%s
+    t1=ssh $host "date +%s"
+    n=echo $t1-$t|bc|sed 's/[^0-9]//g'
+    if [ -z “$n” ]
+    then
+ echo “$host 出错”
+ exit 1
+    fi
+    if [ $n -gt 2 ]
+    then
+  echo “$host 时间不对”
+   ssh $host “ntpdate time.windows.com”
+    fi
+done
 
 ```  

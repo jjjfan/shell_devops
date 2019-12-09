@@ -25,5 +25,10 @@ avg=`echo 'scale=2; '$tot/$num'' |bc`
 
 echo "avg : $avg"
 
+```  
+### 【答案】 
+```bash  
+
+
 
 ```  
