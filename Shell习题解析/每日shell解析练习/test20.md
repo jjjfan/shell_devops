@@ -63,6 +63,33 @@ echo "===== end ====="
 ### 【答案】 
 ```bash  
 
+#!/bin/bash
+mys="mysql -uroot -pdil72lVBn"
 
+if [ $# -ne 2 ] && [ $# -ne 3 ]
+then
+    echo "Please use: sh $0 databasename tablename [count]"
+    exit 1
+fi
 
+$mys -e "show databases"|sed '1'd > /tmp/databases.txt
+if ! grep -qw "$1" /tmp/databases.txt
+then
+    echo "sorry, there is no database $1."
+    exit 1
+fi
+
+$mys $1 -e  "show tables"|sed '1'd > /tmp/$1_tables.txt
+if ! grep -qw "$2" /tmp/$1_tables.txt
+then
+    echo "sorry, there is no table $2."
+    exit 1
+fi
+
+if [ -n "$3" ]
+then
+    $mys $1 -e "select * from $2 limit $3"
+else
+    $mys $1 -e "select * from $2"
+fi
 ```  

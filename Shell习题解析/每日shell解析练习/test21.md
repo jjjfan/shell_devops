@@ -28,7 +28,19 @@ echo "avg : $avg"
 ```  
 ### 【答案】 
 ```bash  
+1) shell
+#!/bin/bash
+sum=0
+n=`wc -l <1.txt`
+for d in `awk '{print $NF}' 1.txt `
+do
+    sum=$[$sum+$d]
+done
+av=`echo "scale=2;$sum/$n"|bc`
+echo $av
 
+2) awk
+awk '{sum+=$NF} END {print "average=" sum/NR}' 1.txt
 
 
 ```  

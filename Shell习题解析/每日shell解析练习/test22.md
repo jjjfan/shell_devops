@@ -51,7 +51,22 @@ fi
 ```  
 ### 【答案】 
 ```bash  
+#!/bin/bash
+url="http://www.example.com/test.php"
+check_web()
+{
+    curl --connect-timeout 3 -I -x$1:80 $url 2>/dev/null > /tmp/$1.curl
+    code=`head -1 /tmp/$1.curl|awk '{print $2}'`
+    if [ -z $code ] || [ $code -ne 200 ]
+    then
+ echo "$1 异常."
+    fi
+}
 
+for web in web1 web2 web3
+do
+    check_web $web
+done
 
 
 ```  
